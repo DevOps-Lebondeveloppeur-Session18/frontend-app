@@ -1,5 +1,5 @@
 # Use official Node.js 14 as base image
-FROM  --platform=linux/amd64 node:18 AS build
+FROM node:18 AS build
 
 # Set working directory
 WORKDIR /app
@@ -21,7 +21,7 @@ COPY . .
 RUN npm run build
 
 
-FROM  --platform=linux/amd64 nginx:alpine
+FROM nginx:alpine
 # Upgrade libexpat to patched version (fixes CVE-2026-45186)
 RUN apk upgrade --no-cache libexpat
 # Copy the build artifacts from the build stage
