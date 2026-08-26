@@ -16,12 +16,14 @@ jobs:
                 run: mkdir folder1
     job2:
         runs-on: ubuntu-latest   
+        needs: job1
         steps: 
               - name: List folders          
                 run: ls -al
  
     job3:
         runs-on: ubuntu-latest   
+        needs: job2
         steps: 
               - name: List folders          
                 run: docker --version
