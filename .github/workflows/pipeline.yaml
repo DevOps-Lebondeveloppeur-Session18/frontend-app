@@ -10,10 +10,10 @@ jobs:
     job1:
         runs-on: ubuntu-latest 
         steps: 
-              - name: Get Workdir         
-                run: pwd
-              - name: Create new folder      
-                run: mkdir folder1
+              - name: clone repository        
+                uses: actions/checkout@v7                 
+              - name: check clone   
+                run: ls
     job2:
         runs-on: ubuntu-latest   
         needs: job1
