@@ -6,8 +6,22 @@ on:
               - main
 
 jobs:
+
     job1:
+        runs-on: ubuntu-latest 
+        steps: 
+              - name: Get Workdir         
+                run: pwd
+              - name: Create new folder      
+                run: mkdir folder1
+    job2:
         runs-on: ubuntu-latest   
         steps: 
               - name: List folders          
                 run: ls -al
+ 
+    job3:
+        runs-on: ubuntu-latest   
+        steps: 
+              - name: List folders          
+                run: docker --version
