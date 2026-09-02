@@ -23,7 +23,7 @@ jobs:
              - name: test
                run: npm run test
 
-    sonarqube-code-quality-scan-job:
+    sonarQube-test:
         runs-on: ubuntu-latest
         steps:
           - name: Clone Source Code
